@@ -1,0 +1,36 @@
+plugins:
+ - jekyll-archives
+ - jekyll-feed
+ - jekyll-paginate
+ - jekyll-seo-tag
+ - jekyll-sitemap
+
+# Site settings
+title: SnakeNest
+name: SnakeNest.com
+description: Snake Utilities
+baseurl: /snakenest.github.io
+github: true
+
+# Theme settings
+markdown: kramdown
+remote_theme: aterenin/minima-reboot
+
+header_pages:
+ - snaketail/snaketail.md
+rss: rss
+paginate: 5
+paginate_path: "/page/:num/"
+
+exclude:
+  - .gitignore
+  - README.md
+  - GemFile
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag
+  permalinks:
+    tag: '/tag/:name/'
